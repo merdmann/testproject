@@ -28,5 +28,15 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.8'
+    addToPath: true
+    architecture: 'x64'
   
+  - task: PythonScript@0
+    inputs:
+      scriptSource: 'filePath'
+      scriptPath: './test/gui.py'
+
+
