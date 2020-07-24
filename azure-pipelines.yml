@@ -23,3 +23,8 @@ steps:
       versionSpec: '3.8'
       addToPath: true
       architecture: 'x64'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'filePath'
+    scriptPath: './test/gui.py'
